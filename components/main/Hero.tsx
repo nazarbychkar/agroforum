@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="py-3"> 27 листопада 2025</div>
       </div>
 
-      <div className="relative min-h-[800px] text-9xl font-bold text-center overflow-hidden">
+      <div className="relative min-h-screen text-9xl font-bold text-center overflow-hidden">
         <div className="relative top-10">
           NOVA AGRO <br /> FORUM{" "}
           <span className="absolute text-base ml-3 mr-25 font-medium bottom-4 text-left text-gray-700">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-between h-10 p-2 shadow-lg fixed inset-0">
+    <header className="w-full max-w-7xl mx-auto flex justify-between h-10 p-2 shadow-lg fixed inset-0 z-50 bg-[#fffaf1]">
       <Link href="/#home">Головна</Link>
       <Link href="/#about">Про захід</Link>
       <Link href="/#topics">Напрямки</Link>
