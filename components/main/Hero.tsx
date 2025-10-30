@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto">
+    <section id="home" className="max-w-7xl mx-auto">
       <div className="grid grid-cols-3 text-center border-b">
         <div className="py-3">Ресторан “Мамай”</div>
         <div className="border-x font-bold py-3">Geluka Agro Corp</div>

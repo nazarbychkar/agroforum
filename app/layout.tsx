@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Агрофорум",
@@ -12,8 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
-      <body>{children}</body>
+    <html lang="uk" className="max-w-7xl mx-auto">
+      <Header />
+      <body className="pt-10">{children}</body>
+      <Footer />
     </html>
   );
 }
