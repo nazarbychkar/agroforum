@@ -15,9 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" className="max-w-7xl mx-auto">
-      <Header />
-      <body className="pt-10">{children}</body>
-      <Footer />
+      <body>
+        <Header />
+        <main className="pt-10">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

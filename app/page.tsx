@@ -10,7 +10,7 @@ import Topics from "@/components/main/Topics";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <About />
       <Topics />
@@ -20,6 +20,6 @@ export default function Home() {
       <Projects />
       <BuyTicket />
       <Contacts />
-    </main>
+    </>
   );
 }

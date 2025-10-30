@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section>
+    <section id="about">
       <div className="flex flex-col items-center p-15 pb-25 relative overflow-hidden">
         <span className="text-7xl font-bold">ХТО МИ ТА ЩО РОБИМО?</span>
         <span className="text-lg text-gray-700 font-bold">
