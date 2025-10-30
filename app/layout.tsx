@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="uk" className="max-w-7xl mx-auto">
       <body>
         <Header />
-        <main className="pt-10">{children}</main>
+        <main className="pt-15">{children}</main>
         <Footer />
       </body>
     </html>

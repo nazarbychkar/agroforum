@@ -1,17 +1,74 @@
+"use client"
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { href: "/#about", label: "Про захід" },
+    { href: "/#topics", label: "Напрямки" },
+    { href: "/#program", label: "Програма" },
+    { href: "/#speakers", label: "Спікери" },
+    { href: "/#partners", label: "Партнери" },
+    { href: "/#projects", label: "Реалізовані проєкти" },
+    { href: "/#buy-a-ticket", label: "Придбати квиток" },
+    { href: "/#contacts", label: "Контакти" },
+  ];
+
   return (
-    <header className="w-full max-w-7xl mx-auto flex justify-between h-10 p-2 shadow-lg fixed inset-0 z-50 bg-[#fffaf1]">
-      <Link href="/#home">Головна</Link>
-      <Link href="/#about">Про захід</Link>
-      <Link href="/#topics">Напрямки</Link>
-      <Link href="/#program">Програма</Link>
-      <Link href="/#speakers">Спікери</Link>
-      <Link href="/#partners">Партнери</Link>
-      <Link href="/#projects">Реалізовані проєкти</Link>
-      <Link href="/#buy-a-ticket">Придбати квиток</Link>
-      <Link href="/#contacts">Контакти</Link>
+    <header className="w-full max-w-7xl bg-[#487307] text-[#fffaf1] fixed top-0 z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+        {/* Logo / Brand */}
+        <Link href="/" className="text-xl font-bold uppercase cursor-pointer">
+          Geluka Agro
+        </Link>
+
+        {/* Desktop Links */}
+        <nav className="hidden md:flex gap-6">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:text-gray-300 transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile Hamburger */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="focus:outline-none"
+          >
+            <div className="w-6 h-0.5 bg-white mb-1"></div>
+            <div className="w-6 h-0.5 bg-white mb-1"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <nav className="md:hidden bg-[#487307] text-[#fffaf1] shadow-inner">
+          <ul className="flex flex-col gap-4 p-4">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block hover:text-gray-300 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
