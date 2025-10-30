@@ -1,13 +1,23 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
+import { ChangeEvent } from "react";
 
 export default function Contacts() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     alert("Form submitted!"); // Replace with your submit logic
   };
@@ -23,7 +33,7 @@ export default function Contacts() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Contact Form */}
         <div className="bg-white p-8 rounded-3xl shadow-lg">
-          <h3 className="text-3xl font-bold mb-6">Зв'яжіться з нами</h3>
+          <h3 className="text-3xl font-bold mb-6">Зв&#39;яжіться з нами</h3>
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -74,9 +84,34 @@ export default function Contacts() {
         <div className="flex flex-col gap-8">
           <div className="bg-white p-8 rounded-3xl shadow-lg">
             <h3 className="text-3xl font-bold mb-4">Контакти організаторів</h3>
-            <p>Телефон: <a href="tel:+380679192946" className="text-green-700 hover:underline">+38 067 919 29 46</a></p>
-            <p>Email: <a href="mailto:aliona@geluka.com" className="text-green-700 hover:underline">aliona@geluka.com</a></p>
-            <p>Telegram: <a href="https://t.me/aliona" target="_blank" className="text-green-700 hover:underline">@aliona</a></p>
+            <p>
+              Телефон:{" "}
+              <a
+                href="tel:+380679192946"
+                className="text-green-700 hover:underline"
+              >
+                +38 067 919 29 46
+              </a>
+            </p>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:aliona@geluka.com"
+                className="text-green-700 hover:underline"
+              >
+                aliona@geluka.com
+              </a>
+            </p>
+            <p>
+              Telegram:{" "}
+              <a
+                href="https://t.me/aliona"
+                target="_blank"
+                className="text-green-700 hover:underline"
+              >
+                @aliona
+              </a>
+            </p>
           </div>
 
           {/* Google Maps */}
@@ -94,9 +129,15 @@ export default function Contacts() {
           <div className="bg-white p-6 rounded-3xl shadow-lg text-center">
             <h3 className="text-3xl font-bold mb-4">Соціальні мережі</h3>
             <div className="flex justify-center gap-6 text-3xl">
-              <Link href="#"><i className="fab fa-facebook text-blue-600"></i></Link>
-              <Link href="#"><i className="fab fa-instagram text-pink-500"></i></Link>
-              <Link href="#"><i className="fab fa-telegram text-blue-400"></i></Link>
+              <Link href="#">
+                <i className="fab fa-facebook text-blue-600"></i>
+              </Link>
+              <Link href="#">
+                <i className="fab fa-instagram text-pink-500"></i>
+              </Link>
+              <Link href="#">
+                <i className="fab fa-telegram text-blue-400"></i>
+              </Link>
             </div>
           </div>
         </div>
