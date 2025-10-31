@@ -1,61 +1,71 @@
 export default function About() {
   return (
     <section id="about">
-      <div className="flex flex-col items-center p-15 pb-25 relative overflow-hidden">
-        <span className="text-7xl font-bold">ХТО МИ ТА ЩО РОБИМО?</span>
-        <span className="text-lg text-gray-700 font-bold">
-          Geluka Agro Corp
-        </span>
-        <div className="absolute inset-0 bg-bottom -bottom-120 bg-no-repeat bg-[url('/bg-mountain.png')] bg-cover z-1"></div>
+      {/* Верхній блок із фоном */}
+      <div className="relative flex flex-col items-center p-12 pb-24 overflow-hidden">
+        {/* Фон у тому ж контейнері */}
+        <div className="absolute inset-0 bg-bottom bg-no-repeat bg-cover bg-[url('/bg-mountain.png')] z-11 -bottom-60"></div>
+
+        {/* Текст поверх фону */}
+        <div className="relative z-10 text-center">
+          <h2 className="text-5xl md:text-6xl font-bold mb-4">
+            ХТО МИ ТА ЩО РОБИМО?
+          </h2>
+          <p className="text-lg text-gray-700 font-semibold">
+            Geluka Agro Corp
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-row-2">
-        <div className="grid grid-cols-3">
-          <div className="flex flex-col items-center text-left text-gray-700 p-10 px-15">
-            <span className="font-bold uppercase ">
+      {/* Грід секція */}
+      <div className="grid grid-rows-2 relative z-10 bg-white/90 backdrop-blur-sm">
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-gray-200">
+          <div className="flex flex-col text-left text-gray-700 p-10 md:px-12">
+            <span className="font-bold uppercase mb-2">
               ОРГАНІЗАЦІЯ АГРАРНИХ ФОРУМІВ, КОНФЕРЕНЦІЙ ТА ВИСТАВОК
             </span>
-            <span className="">
+            <span>
               Ми розробляємо події з нуля: від концепції та логістики до
               запрошення спікерів і роботи з медіа.
             </span>
           </div>
-          <div className="flex flex-col text-left text-gray-700 p-10 px-15 border-x">
-            <span className="font-bold uppercase ">
-              ПРОФЕСІЙНИЙ НЕТВОРКІНГ{" "}
+          <div className="flex flex-col text-left text-gray-700 p-10 md:px-12 border-t md:border-t-0 md:border-x border-gray-200">
+            <span className="font-bold uppercase mb-2">
+              ПРОФЕСІЙНИЙ НЕТВОРКІНГ
             </span>
-            <span className="">
+            <span>
               Створюємо простір, де фермери, агрокомпанії, інвестори та
               інноватори знаходять спільні точки для співпраці.
             </span>
           </div>
-          <div className="flex flex-col text-left text-gray-700 px-15 p-10">
-            <span className="font-bold uppercase ">
-              ФОКУС НА АГРОІННОВАЦІЇ{" "}
+          <div className="flex flex-col text-left text-gray-700 p-10 md:px-12 border-t md:border-t-0 border-gray-200">
+            <span className="font-bold uppercase mb-2">
+              ФОКУС НА АГРОІННОВАЦІЇ
             </span>
-            <span className="">
+            <span>
               Наші заходи висвітлюють новітні технології: точне землеробство,
               агродрони, IoT, автоматизацію тваринництва та інше.
             </span>
           </div>
         </div>
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col text-left text-gray-700 border-t p-10 pl-75">
-            <span className="font-bold uppercase ">
-              ПІДТРИМКА АГРАРНОЇ СПІЛЬНОТИ{" "}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 border-t border-gray-200">
+          <div className="flex flex-col text-left text-gray-700 p-10 md:pl-20 border-gray-200">
+            <span className="font-bold uppercase mb-2">
+              ПІДТРИМКА АГРАРНОЇ СПІЛЬНОТИ
             </span>
-            <span className="">
+            <span>
               Ми працюємо з аграрними асоціаціями, освітніми закладами та
               технопарками для розвитку галузі.
             </span>
           </div>
-          <div className="flex flex-col text-left text-gray-700 border-t border-l p-10 pr-67">
-            <span className="font-bold uppercase ">
-              ІНДИВІДУАЛЬНІ РІШЕННЯ ДЛЯ БІЗНЕСУ{" "}
+          <div className="flex flex-col text-left text-gray-700 p-10 md:pr-20 border-t md:border-t-0 md:border-l border-gray-200">
+            <span className="font-bold uppercase mb-2">
+              ІНДИВІДУАЛЬНІ РІШЕННЯ ДЛЯ БІЗНЕСУ
             </span>
-            <span className="">
-              Допомагаємо компаніям представити себе на ринку через
-              B2B-зустрічі, брендовані події, демо-дні та інші формати.
+            <span>
+              Допомагаємо компаніям представити себе на ринку через B2B-зустрічі,
+              брендовані події, демо-дні та інші формати.
             </span>
           </div>
         </div>
