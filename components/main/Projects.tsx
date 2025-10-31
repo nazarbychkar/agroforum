@@ -38,16 +38,21 @@ export default function ProjectsPage() {
   } | null>(null);
 
   return (
-    <div className="min-h-screen py-20 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-12">🧩 Реалізовані проєкти</h1>
+    <div className="min-h-screen py-20 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5 pointer-events-none"></div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-12 animate-fade-in-slow uppercase tracking-tight text-gray-900">
+          🧩 Реалізовані проєкти
+        </h1>
+
+        <div className="grid md:grid-cols-2 gap-10 animate-fade-in-slow" style={{ animationDelay: "0.2s" }}>
+          {projects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
               onMore={() => setSelectedProject(project)}
+              delay={index * 0.2}
             />
           ))}
         </div>

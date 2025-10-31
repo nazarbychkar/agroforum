@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section id="home" className="max-w-7xl mx-auto">
+    <section id="home" className="mx-auto">
       {/* Top Info Bar */}
       <div className="grid grid-cols-3 text-center border-b text-sm sm:text-base">
         <div className="py-3">Ресторан “Мамай”</div>
@@ -31,12 +31,14 @@ export default function Hero() {
         </div>
 
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('/bg-mountain.png')] bg-bottom bg-no-repeat bg-contain z-1"></div>
+        <div className="absolute inset-0 w-full h-full bg-[url('/bg-mountain.png')] bg-bottom bg-no-repeat bg-cover z-0"></div>
 
         {/* Button */}
         <Link
           href="/buy-a-ticket"
-          className="absolute cursor-pointer p-3 z-2 bg-blue-700 text-white font-normal text-lg rounded-lg hover:shadow-lg bottom-1/4 left-1/2 -translate-x-1/2 md:bottom-1/4"
+          className="absolute cursor-pointer p-3 z-2 bg-white font-normal text-lg rounded-lg 
+             border border-transparent hover:bg-transparent hover:text-white hover:border-white 
+             transition-colors duration-300 bottom-1/4 left-1/2 -translate-x-1/2 md:bottom-1/4"
         >
           Купити квиток
         </Link>

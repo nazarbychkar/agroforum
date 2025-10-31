@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -18,8 +18,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full max-w-7xl bg-[#487307] text-[#fffaf1] fixed top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <header className="w-full bg-[#487307] text-[#fffaf1] fixed top-0 z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto w-full flex justify-between items-center p-4">
         {/* Logo / Brand */}
         <Link href="/" className="text-xl font-bold uppercase cursor-pointer">
           Geluka Agro
@@ -53,21 +53,22 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-[#487307] text-[#fffaf1] shadow-inner">
-          <ul className="flex flex-col gap-4 p-4">
-            {links.map((link) => (
-              <li key={link.href}>
+        <div className="md:hidden bg-[#487307] w-full">
+          <div className="max-w-7xl mx-auto w-full">
+            <nav className="flex flex-col gap-4 p-4">
+              {links.map((link) => (
                 <Link
+                  key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="block hover:text-gray-300 transition-colors"
                 >
                   {link.label}
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+              ))}
+            </nav>
+          </div>
+        </div>
       )}
     </header>
   );

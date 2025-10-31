@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center p-4 bg-[#487307] text-[#fffaf1] shadow-inner mt-12">
+    <footer className="w-full bg-[#487307] text-[#fffaf1]" >
+    <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center p-4  shadow-inner mt-12">
       {/* Left: Copyright */}
       <span className="text-sm mb-2 lg:mb-0">© 2025 Geluka Agro Forum</span>
 
@@ -34,6 +35,7 @@ export default function Footer() {
         >
           partners@geluka.com
         </a>
+      </div>
       </div>
     </footer>
   );
