@@ -11,7 +11,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative min-h-100 md:min-h-screen  overflow-hidden">
+      <div className="relative min-h-130 md:min-h-screen  overflow-hidden">
         {/* Text for PC */}
         <div className="hidden md:block relative top-10 text-9xl font-bold text-center px-20">
           NOVA AGRO <br /> FORUM
@@ -21,17 +21,17 @@ export default function Hero() {
           </span>
         </div>
 
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full bg-[url('/bg-mountain.png')] bg-bottom bg-no-repeat bg-cover z-0"></div>
+
         {/* Text for Mobile */}
-        <div className="block md:hidden relative mt-20 px-4 text-center">
+        <div className="block md:hidden relative z-10 mt-20 px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">NOVA AGRO FORUM</h1>
           <p className="text-sm text-gray-700">
             Платформа для обміну знаннями, досвідом та інноваціями у сфері
             смарт-агро, сталого сільського господарства і тваринництва
           </p>
         </div>
-
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full bg-[url('/bg-mountain.png')] bg-bottom bg-no-repeat bg-cover z-0"></div>
 
         {/* Button */}
         <Link

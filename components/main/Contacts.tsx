@@ -23,7 +23,7 @@ export default function Contacts() {
   };
 
   return (
-    <section className="relative py-16 px-5 ">
+    <section id="contacts" className="relative py-16 px-5 ">
       {/* Title */}
       <div className="mb-12 text-center">
         <h2 className="text-6xl font-bold uppercase">Контакти</h2>

@@ -13,7 +13,7 @@ export default function Header() {
     { href: "/#speakers", label: "Спікери" },
     { href: "/#partners", label: "Партнери" },
     { href: "/#projects", label: "Реалізовані проєкти" },
-    { href: "/#buy-a-ticket", label: "Придбати квиток" },
+    { href: "/#buy-ticket", label: "Придбати квиток" },
     { href: "/#contacts", label: "Контакти" },
   ];
 

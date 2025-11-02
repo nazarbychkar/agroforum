@@ -45,7 +45,7 @@ export default function BuyTicket() {
   return (
     <section
       id="buy-ticket"
-      className="relative py-24 bg-gradient-to-b from-white via-green-50 to-green-100 max-w-7xl mx-auto rounded-3xl overflow-hidden"
+      className="relative py-24 bg-linear-to-b from-white via-green-50 to-green-100 max-w-7xl mx-auto rounded-3xl overflow-hidden"
     >
       {/* Subtle background pattern */}
       <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5 pointer-events-none"></div>

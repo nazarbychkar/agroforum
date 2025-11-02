@@ -37,7 +37,7 @@ export default function SpeakersPage() {
   } | null>(null);
 
   return (
-    <section className="min-h-screen py-20 px-6 ">
+    <section id="speakers" className="min-h-screen py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-5xl font-extrabold mb-14 uppercase tracking-tight text-gray-900 relative">
           🎙️ Наші спікери

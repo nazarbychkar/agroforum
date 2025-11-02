@@ -38,7 +38,7 @@ export default function ProjectsPage() {
   } | null>(null);
 
   return (
-    <div className="min-h-screen py-20 px-6 relative overflow-hidden">
+    <div id="projects" className="min-h-screen py-20 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5 pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
